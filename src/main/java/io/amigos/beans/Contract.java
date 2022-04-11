@@ -1,18 +1,20 @@
 package io.amigos.beans;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Component
+@ConfigurationProperties(prefix = "contract")
 public class Contract {
 
-    @Value("${contract.contractId}")
+//    @Value("${contract.contractId}")
     private int contractId;
-    @Value("${contract.contractName}")
+//    @Value("${contract.contractName}")
     private String contractName;
-    @Value("${contract.description}")
+//    @Value("${contract.description}")
     private String description;
-    @Value("${contract.contractBidPrice}")
+//    @Value("${contract.contractBidPrice}")
     private double contractBidPrice;
 
     public int getContractId() {
